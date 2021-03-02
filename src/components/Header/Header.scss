@@ -1,0 +1,70 @@
+@import '../../scss/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $gray-line;
+  padding: 40px 0;
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    .logo {
+      margin-right: 15px;
+    }
+  }
+  .title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: $black;
+    margin: 0;
+  }
+  .span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #7b7b7b;
+    margin: 0;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 150px;
+  height: 50px;
+  border: 0;
+  background: $orange;
+  border-radius: 30px;
+  cursor: pointer;
+  padding: 0 20px 0 20px;
+
+  span {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+  }
+
+  .delimiter {
+    width: 1px;
+    height: 25px;
+    margin-left: 14px;
+    margin-right: 14px;
+    background: rgba(255, 255, 255, 0.25);
+  }
+  .cart-svg {
+    margin-right: 8px;
+  }
+}

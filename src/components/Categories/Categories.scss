@@ -1,0 +1,41 @@
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-top: 40px;
+}
+.item {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.015em;
+
+  color: #2c2c2c;
+  background: #f9f9f9;
+  border-radius: 30px;
+  padding: 13px 20px;
+  margin-right: 10px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.active-item {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.015em;
+  outline: 0;
+  color: #fff;
+  background: #282828;
+  border-radius: 30px;
+  padding: 13px 20px;
+  margin-right: 10px;
+  border: 0;
+  cursor: pointer;
+}

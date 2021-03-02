@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
+import './Categories.scss';
 
 export default function Categories({ items }) {
-  const [isActiveIndex, setIsActiveIndex] = useState(null);
-  const onClick = index => {
-    setIsActiveIndex(index);
+  const [isActiveItem, setIsActiveItem] = useState('');
+  const onClick = item => {
+    setIsActiveItem(item);
   };
   return (
-    <ul>
-      {items.map((item, index) => (
-        <li
+    <div className="list">
+      {items.map(item => (
+        <button
           key={item}
-          onClick={() => onClick(index)}
-          className={isActiveIndex === index ? 'active' : ''}
+          onClick={() => onClick(item)}
+          className={isActiveItem === item ? 'active-item' : 'item'}
         >
           {item}
-        </li>
+        </button>
       ))}
-    </ul>
+    </div>
   );
 }

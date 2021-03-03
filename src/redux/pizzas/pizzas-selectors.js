@@ -6,6 +6,9 @@ const getCategory = state => state.pizzas.category;
 const getFilteredPizzas = createSelector(
   [getAllPizzas, getCategory],
   (pizzas, filter) => {
+    if (filter === 0) {
+      return pizzas;
+    }
     return pizzas.filter(pizza => pizza.category === filter);
   },
 );

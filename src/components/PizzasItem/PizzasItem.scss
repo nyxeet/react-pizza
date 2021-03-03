@@ -1,0 +1,79 @@
+.pizza-item {
+  position: relative;
+  width: calc(100% / 4 - 50px);
+  margin: 17.5px;
+}
+.pizza-img {
+  width: calc(100% - 15px);
+  margin-left: 15px;
+}
+.pizza-title {
+  text-align: center;
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+.pizza-buttons {
+  height: 78px;
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding-top: 7px;
+}
+.pizza-types {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  .active-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #2c2c2c;
+
+    width: calc(100% / 2);
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 32px;
+    background: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #2c2c2c;
+
+    width: calc(100% / 2);
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 32px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+.mt {
+  margin-top: 7px;
+}

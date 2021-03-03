@@ -1,11 +1,8 @@
 .pizza-list {
   list-style: none;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-}
-.pizza-item {
-  width: 280px;
-}
-.pizza-img {
-  width: 260px;
+  padding: 0;
+  margin: -17.5px;
 }

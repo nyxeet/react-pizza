@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import pizzasOperations from '../../redux/pizzas/pizzas-operations';
 import pizzasSelectors from '../../redux/pizzas/pizzas-selectors';
 import './PizzasList.scss';
+import PizzasItem from '../PizzasItem/PizzasItem';
 
 const PizzasList = () => {
   const filteredItems = useSelector(pizzasSelectors.getFilteredPizzas);
@@ -14,10 +15,7 @@ const PizzasList = () => {
   return (
     <ul className="pizza-list">
       {filteredItems.map(item => (
-        <li key={item.id} className="pizza-item">
-          <img src={item.imageUrl} className="pizza-img" />
-          <h1>{item.name}</h1>
-        </li>
+        <PizzasItem item={item} key={item.id} />
       ))}
     </ul>
   );

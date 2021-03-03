@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import cartActions from '../../redux/cart/cart-actions';
 import './PizzasItem.scss';
 
 const PizzasItem = ({ item }) => {
+  const dispatch = useDispatch();
   const typeNames = ['тонкое', 'традиционное'];
   const sizes = ['26 см.', '30 см.', '40 см.'];
 
-  const [type, setType] = useState('');
-  const [size, setSize] = useState('');
+  const [type, setType] = useState('тонкое');
+  const [size, setSize] = useState('26 см.');
+  const [inCart, setInCart] = useState(null);
+
+  const addToCart = useCallback(
+    (...data) => {
+      setInCart(prev => prev + 1);
+      dispatch(cartActions.addPizza(data));
+    },
+    [dispatch],
+  );
   return (
     <li key={item.id} className="pizza-item">
       <img src={item.imageUrl} className="pizza-img" />
@@ -34,6 +46,16 @@ const PizzasItem = ({ item }) => {
             </li>
           ))}
         </ul>
+      </div>
+      <div className="price-section">
+        <h1 className="pizza-price">от {item.price} &#8381;</h1>
+        <button
+          className="pizza-button"
+          type="button"
+          onClick={() => addToCart(item.name, type, size)}
+        >
+          Добавить {inCart}
+        </button>
       </div>
     </li>
   );

@@ -1,6 +1,6 @@
 .pizza-item {
   position: relative;
-  width: calc(100% / 4 - 50px);
+  width: calc(100% / 4 - 35px);
   margin: 17.5px;
 }
 .pizza-img {
@@ -76,4 +76,56 @@
 }
 .mt {
   margin-top: 7px;
+}
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 17px;
+}
+.pizza-price {
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: 0.015em;
+}
+.pizza-button {
+  min-width: 132px;
+  height: 40px;
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: 1px solid #eb5a1e;
+  cursor: pointer;
+  outline: 0;
+
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #eb5a1e;
+}
+.pizza-button:hover {
+  min-width: 132px;
+  height: 40px;
+  background: #fe5f1e;
+  border: 1px solid #fe5f1e;
+  box-sizing: border-box;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: 0;
+
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #ffffff;
 }

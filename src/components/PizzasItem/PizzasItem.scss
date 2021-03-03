@@ -94,10 +94,12 @@
   letter-spacing: 0.015em;
 }
 .pizza-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 132px;
   height: 40px;
   background: #fff;
-  box-sizing: border-box;
   border-radius: 30px;
   border: 1px solid #eb5a1e;
   cursor: pointer;
@@ -112,20 +114,25 @@
   color: #eb5a1e;
 }
 .pizza-button:hover {
-  min-width: 132px;
-  height: 40px;
   background: #fe5f1e;
   border: 1px solid #fe5f1e;
-  box-sizing: border-box;
-  border-radius: 30px;
-  cursor: pointer;
-  outline: 0;
+  color: #ffffff;
+}
+.incart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #eb5a1e;
+  color: white;
+  margin-left: 5px;
 
   font-family: Proxima Nova;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 19px;
-
-  color: #ffffff;
+  font-size: 13px;
+  line-height: 16px;
+  /* identical to box height */
 }

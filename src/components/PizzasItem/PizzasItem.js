@@ -52,9 +52,9 @@ const PizzasItem = ({ item }) => {
         <button
           className="pizza-button"
           type="button"
-          onClick={() => addToCart(item.name, type, size)}
+          onClick={() => addToCart(item.name, item.price, type, size)}
         >
-          Добавить {inCart}
+          Добавить {inCart && <div class="incart">{inCart}</div>}
         </button>
       </div>
     </li>

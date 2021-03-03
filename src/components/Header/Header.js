@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import cartSelectors from '../../redux/cart/cart-selectors';
 import './Header.scss';
 import logoSvg from '../../assets/img/logo.svg';
 import cartSvg from '../../assets/img/cart.svg';
 
 export default function Header() {
+  const summary = useSelector(cartSelectors.summaryPrice);
+  const allOrders = useSelector(cartSelectors.getAllOrdersLength);
   return (
     <header className="header">
       <Link to="/" className="link">
@@ -15,10 +19,10 @@ export default function Header() {
         </div>
       </Link>
       <button type="button" className="button">
-        <span>520 &#8381;</span>
+        <span>{summary} &#8381;</span>
         <div className="delimiter"></div>
         <img src={cartSvg} className="cart-svg" />
-        <span>3</span>
+        <span>{allOrders}</span>
       </button>
     </header>
   );

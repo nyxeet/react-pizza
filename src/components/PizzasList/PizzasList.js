@@ -10,7 +10,7 @@ const PizzasList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(pizzasOperations.fetchPizzas());
-  }, []);
+  }, [dispatch]);
 
   return (
     <ul className="pizza-list">

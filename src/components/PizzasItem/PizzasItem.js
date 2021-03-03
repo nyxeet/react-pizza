@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import cartActions from '../../redux/cart/cart-actions';
 import './PizzasItem.scss';
 
@@ -21,7 +21,7 @@ const PizzasItem = ({ item }) => {
   );
   return (
     <li key={item.id} className="pizza-item">
-      <img src={item.imageUrl} className="pizza-img" />
+      <img src={item.imageUrl} className="pizza-img" alt="kartin04ka" />
       <h2 className="pizza-title">{item.name}</h2>
       <div className="pizza-buttons">
         <ul className="pizza-types">

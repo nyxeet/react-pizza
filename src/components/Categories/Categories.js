@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import './Categories.scss';
 import pizzasActions from '../../redux/pizzas/pizzas-actions';
 
@@ -8,7 +8,7 @@ export default function Categories({ items }) {
   const [isActiveItem, setIsActiveItem] = useState(0);
   useEffect(() => {
     dispatch(pizzasActions.changeCategory(0));
-  }, []);
+  }, [dispatch]);
 
   const onClick = index => {
     setIsActiveItem(index);

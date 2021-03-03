@@ -1,5 +1,6 @@
 import React from 'react';
 import Categories from '../components/Categories/Categories';
+import PizzasList from '../components/PizzasList/PizzasList';
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
           'Закрытые',
         ]}
       />
+      <PizzasList />
     </div>
   );
 }

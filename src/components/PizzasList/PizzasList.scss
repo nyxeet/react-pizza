@@ -1,0 +1,11 @@
+.pizza-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pizza-item {
+  width: 280px;
+}
+.pizza-img {
+  width: 260px;
+}
